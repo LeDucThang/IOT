@@ -1,0 +1,1 @@
+sqlacodegen sqlite:///IOTHC.db --outfile Models/DataContext.py

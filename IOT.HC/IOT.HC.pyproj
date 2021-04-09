@@ -1,0 +1,159 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>bfe12828-5596-4f8c-bd2b-1466a3f1350c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>IOT.HC</Name>
+    <RootNamespace>IOT.HC</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Category.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\CategoryDeviceAttributeMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ComparisonOperator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Device.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\DeviceAttribute.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerInputDeviceMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerInputDeviceSetupValue.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerOutputDeviceMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerOutputDeviceSetupValue.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerOutputGroupingMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerOutputGroupingSetupValue.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerOutputSceneMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EventTriggerType.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Grouping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\GroupingDeviceMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\HomeController.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CategoryDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CategoryDeviceAttributeMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ComparisonOperatorDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py" />
+    <Compile Include="Models\DeviceAttributeDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\DeviceDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTrigger.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerInputDeviceMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerInputDeviceSetupValueDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerOutputDeviceMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerOutputDeviceSetupValueDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerOutputGroupingMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerOutputGroupingSetupValueDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerOutputSceneMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EventTriggerTypeDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\GroupingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\GroupingDeviceMappingDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\HomeControllerDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\__init__.py" />
+    <Compile Include="Repositories\CategoryRepository.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\UOW.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\__init__.py" />
+    <Compile Include="Rpc\CategoryController.py" />
+    <Compile Include="Rpc\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Rpc\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="genModel.bat" />
+    <Content Include="IOTHC.db" />
+    <Content Include="run.bat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
